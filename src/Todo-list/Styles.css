@@ -1,0 +1,52 @@
+*{
+    margin:0;
+    padding:0;
+}
+.container {
+    background-color: linear-gradient(to right bottom, #e1b382, #c89666);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-wrapper {
+    background-color: #f7fcfd;
+    min-width: 450px;
+    min-height: 650px;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 3px 6px 40px #000;
+    margin-bottom: 10px;
+}
+h1{
+    text-align:center;
+    margin:0 50px;
+}
+.task-input
+{
+   
+            outline: none; 
+            width: 230px;
+            min-height:0px;
+            padding: 15px;
+            margin-right: 25px;
+            margin-top:25px;
+            font-size: 20px;
+            color:black;
+            background-color: #faf7f7;
+            border: 1px solid #1738f3;
+            border-radius: 10px;
+        }
+.button-add {
+    width:150px;
+    padding: 15px 15px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 0;
+    background-color: #2914ec;
+    color:white;
+    cursor: pointer;
+}
