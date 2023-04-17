@@ -19,9 +19,7 @@ function handleClick()
     return [...prevData,input];
    // setInputs(" ");
   }
-  
-  )}
-
+   )}
 
 // function handleClick()
 // {
