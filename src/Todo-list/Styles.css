@@ -30,13 +30,13 @@ h1{
    
             outline: none; 
             width: 230px;
-            min-height:0px;
+            min-height:5px;
             padding: 15px;
             margin-right: 25px;
             margin-top:25px;
             font-size: 20px;
             color:black;
-            background-color: #faf7f7;
+            background-color: #fff;
             border: 1px solid #1738f3;
             border-radius: 10px;
         }
@@ -49,4 +49,14 @@ h1{
     background-color: #2914ec;
     color:white;
     cursor: pointer;
+}
+.list-item {
+    display: flex;
+    margin: 20px 0;
+    /* border: 1px solid #ccc; */
+    background-color:white;
+    border: 1px solid #1738f3;
+    border-radius: 10px;
+    padding: 10px;
+    max-height: 30px;
 }
