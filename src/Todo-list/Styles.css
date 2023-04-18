@@ -60,3 +60,13 @@ h1{
     padding: 10px;
     max-height: 30px;
 }
+.button-delete-task-button
+{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 28px;
+    border-radius: 50%;
+
+}
