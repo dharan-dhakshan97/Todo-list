@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../Todo-list/Styles.css";
 import Todoitems from "../Todo-list/Todoitems";
 // import { MdDeleteSweep } from "react-icons/md";
@@ -51,14 +51,16 @@ const Components = () => {
   // }
 
   // Delete an items....
-//   function handleDelete(id) {
-//     // const deleteData = data.filter((data) => data !== deleteData);
-//     // setDeleteitem(deleteData);
-// setDeleteitem(datas.filter((data)=>data.index!==id));
-//   }
-
+  //   function handleDelete(id) {
+  //     // const deleteData = data.filter((data) => data !== deleteData);
+  //     // setDeleteitem(deleteData);
+  // setDeleteitem(datas.filter((data)=>data.index!==id));
+  //   }
+  useEffect(() => {
+    console.log("rerender");
+  }, [input]);
   return (
-<>
+    <>
       <div className="container">
         <div className="app-wrapper">
           <h1>Todo-List</h1>
@@ -74,17 +76,15 @@ const Components = () => {
               Add Items
             </button>
           </div>
-          </div>
-    </div> 
-<div className="list-item">
-  
-    {datas.map((data,index)=>
-    {
-      return <Todoitems key={index} text={data} className="list-item" />;})}
-</div>
-
+        </div>
+      </div>
+      <div className="list-item">
+        {datas.map((data, index) => {
+          return <Todoitems key={index} text={data} className="list-item" />;
+        })}
+      </div>
     </>
-  )
-}
+  );
+};
 
 export default Components;

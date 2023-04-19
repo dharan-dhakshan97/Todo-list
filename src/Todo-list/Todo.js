@@ -12,6 +12,9 @@ const Todo = () => {
     setInputdatas((prevData) => [...prevData, inputvalue]);
   }
   console.log(inputdatas);
+
+
+
   return (
     <>
       <form>
