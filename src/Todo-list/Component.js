@@ -1,18 +1,23 @@
 import React from "react";
 import { useState } from "react";
-import "../Todo-list/Styles.css";
 import { MdDelete } from "react-icons/md";
+// import Todoitems from "../Todo-list/Todoitems";
+import "../Todo-list/Styles.css";
 import { AiFillEdit } from "react-icons/ai";
-const Component = () => {
+
+const Component = ({editItems}) => {
   const [inputs, setInputs] = useState("");
   const [inputdatas, setInputdatas] = useState([]);
+  // const [delete,setDelete]=useState([]);
+  function handleDelete(index) {
+    setInputdatas(inputdatas.filter((inputdata) => inputdata !== index));
+  }
 
-  // const [inputdata,setInputData]=useState("");
-  // function handleChanges(event)
-  // {
-  //     setInputData(event.target.value);
-  // }
-
+  
+// function editItems()
+// {
+  
+// }
   function handleChange(event) {
     setInputs(event.target.value);
   }
@@ -51,13 +56,19 @@ const Component = () => {
             <ul>
               {inputdatas.map((inputdata, index) => {
                 return (
-                  <h5 key={index} className="list-item"> {inputdata}
-
-                    <MdDelete />
-                    <AiFillEdit />
+                  <h5 key={index} className="list-item" value={inputdata}>
+                    {" "}
+                    {inputdata}
+                    <AiFillEdit className="button-edit" editItems={editItems}/>
+                    {/* <input type="text" className="task-input" /> */}
+                    {/* <Todoitems editItems={editItems}/> */}
+                    <MdDelete
+                      onClick={() => handleDelete(inputdata)}
+                      className="button-delete"
+                    />
                   </h5>
                 );
-// <input type="text" key ={index} className="list-item"> {inputdata}</input>
+                // <input type="text" key ={index} className="list-item"> {inputdata}</input>
 
                 // onChanges={handleChanges} value={inputdata}
               })}
