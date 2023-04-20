@@ -10,7 +10,6 @@ const Todoitems = ({ editItems }) => {
       return [...prevData, inputdata];
     });
   }
-
   return (
     <>
       {/* <AiFillEdit  className="button-edit" onClick={editItems}value={editItem}/>  */}
