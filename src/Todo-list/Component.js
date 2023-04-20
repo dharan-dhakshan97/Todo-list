@@ -51,8 +51,7 @@ const Component = () => {
             <ul>
               {inputdatas.map((inputdata, index) => {
                 return (
-                  <h5 key={index} className="list-item">
-                    {inputdata}
+                  <h5 key={index} className="list-item"> {inputdata}
 
                     <MdDelete />
                     <AiFillEdit />
