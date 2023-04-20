@@ -1,17 +1,12 @@
-import React from "react";
-// import Components from "./Todo-list/Components";
+import React from 'react'
+import Component from "./Todo-list/Component";
 import "./Todo-list/Styles.css";
-import Todo from "./Todo-list/Todo";
-
-// import Todoitems from "./Todo-list/Todoitems";
 const App = () => {
   return (
     <>
-      {/* <Components />
-      <Todoitems /> */}
-      <Todo/>
+    <Component/>
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
