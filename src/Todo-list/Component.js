@@ -57,8 +57,7 @@ const Component = () => {
                     <AiFillEdit />
                   </h5>
                 );
-
-                // <input type="text" key ={index} className="list-item"> {inputdata}</input>
+// <input type="text" key ={index} className="list-item"> {inputdata}</input>
 
                 // onChanges={handleChanges} value={inputdata}
               })}
