@@ -23,17 +23,20 @@ const Component = ({editItems}) => {
   }
 
   function handleClick() {
-    setInputdatas((preData) => {
-      return [...preData, inputs];
-    });
-  }
-  console.log(inputdatas);
+    // setInputdatas((preData) => {
+    //   return [...preData, inputs];
+
+setInputdatas([...inputdatas,inputs]);
+  setInputs("");
+    };
+  
+  // console.log(inputdatas);
   return (
     <>
       <div className="container">
         <div className="app-wrapper">
-          <h1>Todo-List</h1>
-
+          
+          <h1 className="header">Todo-List</h1>
           <div>
             <input
               type="text"
@@ -51,6 +54,7 @@ const Component = ({editItems}) => {
               Add Item{" "}
             </button>
           </div>
+
           <div>
             {/* <h5 key={index}>{inputdata}</h5> */}
             <ul>
@@ -59,7 +63,7 @@ const Component = ({editItems}) => {
                   <h5 key={index} className="list-item" value={inputdata}>
                     {" "}
                     {inputdata}
-                    <AiFillEdit className="button-edit" editItems={editItems}/>
+                    <AiFillEdit className="button-edit" editItems={editItems} />
                     {/* <input type="text" className="task-input" /> */}
                     {/* <Todoitems editItems={editItems}/> */}
                     <MdDelete
