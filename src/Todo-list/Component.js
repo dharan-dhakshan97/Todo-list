@@ -4,20 +4,16 @@ import { MdDelete } from "react-icons/md";
 // import Todoitems from "../Todo-list/Todoitems";
 import "../Todo-list/Styles.css";
 import { AiFillEdit } from "react-icons/ai";
-
-const Component = ({editItems}) => {
+const Component = () => {
   const [inputs, setInputs] = useState("");
   const [inputdatas, setInputdatas] = useState([]);
+
   // const [delete,setDelete]=useState([]);
+
   function handleDelete(index) {
     setInputdatas(inputdatas.filter((inputdata) => inputdata !== index));
   }
 
-  
-// function editItems()
-// {
-  
-// }
   function handleChange(event) {
     setInputs(event.target.value);
   }
@@ -26,16 +22,20 @@ const Component = ({editItems}) => {
     // setInputdatas((preData) => {
     //   return [...preData, inputs];
 
-setInputdatas([...inputdatas,inputs]);
-  setInputs("");
-    };
-  
+    setInputdatas([...inputdatas, inputs]);
+    setInputs("");
+  }
+
   // console.log(inputdatas);
+
+  function handleEdit() {
+    setInputs("");
+  }
+
   return (
     <>
       <div className="container">
         <div className="app-wrapper">
-          
           <h1 className="header">Todo-List</h1>
           <div>
             <input
@@ -61,20 +61,18 @@ setInputdatas([...inputdatas,inputs]);
               {inputdatas.map((inputdata, index) => {
                 return (
                   <h5 key={index} className="list-item" value={inputdata}>
-                    {" "}
                     {inputdata}
-                    <AiFillEdit className="button-edit" editItems={editItems} />
-                    {/* <input type="text" className="task-input" /> */}
-                    {/* <Todoitems editItems={editItems}/> */}
+                    <AiFillEdit
+                      onClick={() => handleEdit()}
+                      className="button-edit"
+                    />
+
                     <MdDelete
-                      onClick={() => handleDelete(inputdata)}
+                      onClick={() => handleDelete(inputdata)} // calling the final inputdata
                       className="button-delete"
                     />
                   </h5>
                 );
-                // <input type="text" key ={index} className="list-item"> {inputdata}</input>
-
-                // onChanges={handleChanges} value={inputdata}
               })}
             </ul>
           </div>

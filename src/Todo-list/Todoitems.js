@@ -1,22 +1,22 @@
-import React from "react";
-// import { AiFillEdit } from "react-icons/ai";
-// import { useState } from "react";
-// import Component from "../Todo-list/Component";
-const Todoitems = () => {
-  // const [editItem, setEdititem] = useState([]);
+// import React from 'react'
+// import {AiFillEdit} from "react-icons/ai";
+// // import {useState} from "react";
+// const Todoitems = ({inputdatas,setInputdatas,editItems,setEditItems}) => {
 
-  // function handleEdit(inputdata) {
-  //   setEdititem((prevData) => {
-  //     return [...prevData, inputdata];
 
-  //   });
-  // }
-  return (
-    <>
-      {/* <AiFillEdit  className="button-edit" onClick={editItems}value={editItem}/>  */}
-      {/* <Component value={editItem} onClick={handleEdit} /> */}
-    </>
-  );
-};
+// function handleEdit({index})
+// {
 
-export default Todoitems;
+//   const findTodo = inputdatas.find((inputdata)=>inputdata.index===index);
+//   setEditItems(findTodo);
+// }
+
+
+//  return (
+//     <AiFillEdit onClick={()=>handleEdit(editItems)}>
+//       <button>Update</button>
+//     </AiFillEdit>
+//   )
+// }
+
+// export default Todoitems;
