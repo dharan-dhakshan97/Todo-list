@@ -2,6 +2,7 @@ import React from 'react'
 import Component from "./Todo-list/Component";
 import "./Todo-list/Styles.css";
 // import Todoitems from "./Todo-list/Todoitems";
+// import Edittodo from "./Todo-list/Edittodo";
 const App = ( ) => {
 
   return (
@@ -9,6 +10,7 @@ const App = ( ) => {
     <>
     <Component/> 
     {/* <Todoitems/> */}
+    {/* <Edittodo/> */}
     </>
   )
 }
