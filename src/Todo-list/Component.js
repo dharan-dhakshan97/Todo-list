@@ -4,7 +4,7 @@ import { MdDelete } from "react-icons/md";
 //import Todoitems from "../Todo-list/Todoitems";
 import "../Todo-list/Styles.css";
 import { AiFillEdit } from "react-icons/ai";
-//  import Edittodo from "../Todo-list/Edittodo";
+import Edittodo from "../Todo-list/Edittodo";
 const Component = () => {
   const [inputs, setInputs] = useState("");
   const [inputdatas, setInputdatas] = useState([]);
@@ -19,6 +19,7 @@ const Component = () => {
     const data = inputdatas.filter((inputdata) => inputdata !== id);
     setInputdatas(data);
     console.log(data, "filter datas");
+    console.log((inputdata) => inputdata !== id, "What Happended");
   }
 
   function handleChange(event) {
@@ -27,6 +28,7 @@ const Component = () => {
 
   function handleClick() {
     setInputdatas([...inputdatas, inputs]);
+    console.log([...inputdatas, inputs]);
     setInputs("");
   }
 
@@ -34,10 +36,7 @@ const Component = () => {
   // return [...preData, inputs];
   // console.log(inputdatas);
 
-  // function handleEdit()
-  // {
-  //   const edit=
-  // }
+  function handleEdit(index) {}
 
   return (
     <>
@@ -69,8 +68,8 @@ const Component = () => {
                 return (
                   <h5 key={id} className="list-item" value={inputdata}>
                     {inputdata}
-                    <AiFillEdit />
-                    {/* <Edittodo inputdata={inputdata}/> */}
+                    <AiFillEdit onClick={() => handleEdit(inputdata)} />
+                    <Edittodo handleEdit={handleEdit} />
                     <MdDelete
                       onClick={() => handleDelete(inputdata)} // calling the final inputdata
                       className="button-delete"
