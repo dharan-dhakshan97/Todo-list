@@ -4,10 +4,11 @@ import { MdDelete } from "react-icons/md";
 //import Todoitems from "../Todo-list/Todoitems";
 import "../Todo-list/Styles.css";
 import { AiFillEdit } from "react-icons/ai";
-import Edittodo from "../Todo-list/Edittodo";
+// import Edititem from "./Edititem";
 const Component = () => {
   const [inputs, setInputs] = useState("");
   const [inputdatas, setInputdatas] = useState([]);
+  // const [edit,setEdit]=useState(true);
   // const [edititems,setEditItems]=useState("");
   // const [value,setValue]=useState();
   // const [delete,setDelete]=useState([]);
@@ -35,8 +36,21 @@ const Component = () => {
   //setInputdatas((preData) => {
   // return [...preData, inputs];
   // console.log(inputdatas);
+  
+  function handleEdit(welcomeName)
+  {
 
-  function handleEdit(index) {}
+alert(`Hello world, ${welcomeName}`);
+
+  }
+
+
+function handleChanges()
+{
+    alert(`plz edit it!`);
+}
+
+
 
   return (
     <>
@@ -68,8 +82,14 @@ const Component = () => {
                 return (
                   <h5 key={id} className="list-item" value={inputdata}>
                     {inputdata}
-                    <AiFillEdit onClick={() => handleEdit(inputdata)} />
-                    <Edittodo handleEdit={handleEdit} />
+                    <AiFillEdit
+                      onClick={() => handleChanges(inputdata)}
+                      handleEdit={handleEdit}
+                    />
+                    {/* onChange={()=>handleChanges(inputdata)}/>  */}
+
+                    {/* <Edititem/> */}
+                    {/* handleEdit={handleEdit}  */}
                     <MdDelete
                       onClick={() => handleDelete(inputdata)} // calling the final inputdata
                       className="button-delete"
