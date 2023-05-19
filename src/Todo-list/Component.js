@@ -5,7 +5,7 @@ import { MdDelete } from "react-icons/md";
 import "../Todo-list/Styles.css";
 import { AiFillEdit } from "react-icons/ai";
 // import Edititem from "./Edititem";
-const Component = () => {
+  const Component = () => {
   const [inputs, setInputs] = useState("");
   const [inputdatas, setInputdatas] = useState([]);
   // const [edit,setEdit]=useState(true);
