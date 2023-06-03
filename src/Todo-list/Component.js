@@ -12,8 +12,8 @@ import { AiFillEdit } from "react-icons/ai";
   // const [edititems,setEditItems]=useState("");
   // const [value,setValue]=useState();
   // const [delete,setDelete]=useState([]);
-
-  function handleDelete(id) {
+  
+    function handleDelete(id) {
     console.log(id, "parameter");
     console.log(inputdatas, "data");
 
