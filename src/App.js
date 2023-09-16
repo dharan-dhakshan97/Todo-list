@@ -1,22 +1,22 @@
-import React from 'react'
-import Component from "./Todo-list/Component";
-import "./Todo-list/Styles.css";
+import React from "react";
+// import Component from "./Todo-list/Component";
+// import "./Todo-list/Styles.css";
 // import Todoitems from "./Todo-list/Todoitems";
 // import Edittodo from "./Todo-list/Edittodo";
-const App = ( ) => {
-
+import TodoWrapper from "./Todo-list/TodoWrapper";
+// import Todo from './Todo-list/Todo';
+const App = () => {
   return (
-
     <>
-    <Component/> 
-    {/* <Todoitems/> */}
-    {/* <Edittodo/> */}
+      {/* <Component/>  */}
+      {/* <Todoitems/> */}
+      {/* <Edittodo/> */}
+      <TodoWrapper />
     </>
-  )
-}
+  );
+};
 
 export default App;
-
 
 // import React from "react";
 // import "./Styles.css";
@@ -32,8 +32,6 @@ export default App;
 //     setInputdatas((prevData) => [...prevData, inputvalue]);
 //   }
 //   console.log(inputdatas);
-
-
 
 //   return (
 //     <>
@@ -65,9 +63,3 @@ export default App;
 // };
 
 // export default Todo;
-
-
-
-
-
-
